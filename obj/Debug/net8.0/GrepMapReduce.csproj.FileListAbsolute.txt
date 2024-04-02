@@ -1,0 +1,29 @@
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\bin\Debug\net8.0\GrepMapReduce.exe
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\bin\Debug\net8.0\GrepMapReduce.deps.json
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\bin\Debug\net8.0\GrepMapReduce.runtimeconfig.json
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\bin\Debug\net8.0\GrepMapReduce.dll
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\bin\Debug\net8.0\GrepMapReduce.pdb
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\obj\Debug\net8.0\GrepMapReduce.GeneratedMSBuildEditorConfig.editorconfig
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\obj\Debug\net8.0\GrepMapReduce.AssemblyInfoInputs.cache
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\obj\Debug\net8.0\GrepMapReduce.AssemblyInfo.cs
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\obj\Debug\net8.0\GrepMapReduce.csproj.CoreCompileInputs.cache
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\obj\Debug\net8.0\GrepMapReduce.dll
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\obj\Debug\net8.0\refint\GrepMapReduce.dll
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\obj\Debug\net8.0\GrepMapReduce.pdb
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\obj\Debug\net8.0\GrepMapReduce.genruntimeconfig.cache
+C:\projetos\Sistemas Distribuidos\GrepMapReduce\obj\Debug\net8.0\ref\GrepMapReduce.dll
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\bin\Debug\net8.0\GrepMapReduce.exe
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\bin\Debug\net8.0\GrepMapReduce.deps.json
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\bin\Debug\net8.0\GrepMapReduce.runtimeconfig.json
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\bin\Debug\net8.0\GrepMapReduce.dll
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\bin\Debug\net8.0\GrepMapReduce.pdb
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\GrepMapReduce.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\GrepMapReduce.AssemblyInfoInputs.cache
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\GrepMapReduce.AssemblyInfo.cs
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\GrepMapReduce.csproj.CoreCompileInputs.cache
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\GrepMapReduce.sourcelink.json
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\GrepMapReduce.dll
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\refint\GrepMapReduce.dll
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\GrepMapReduce.pdb
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\GrepMapReduce.genruntimeconfig.cache
+C:\Users\alyss\Documents\GitHub\MapReduceGrep\obj\Debug\net8.0\ref\GrepMapReduce.dll
