@@ -15,16 +15,17 @@ namespace MapReduce
 
         protected override void Map(string input, int order)
         {
-            foreach (var line in input.Split("\r\n", StringSplitOptions.RemoveEmptyEntries))
+            foreach (var line in input.Split("\n", StringSplitOptions.RemoveEmptyEntries))
             {
                 bool isValid = false;
+                string trimmedLine = line.Trim();
 
                 Regex regex = new Regex(Pattern);
 
-                if (IsRegex && regex.IsMatch(line))
+                if (IsRegex && regex.IsMatch(trimmedLine))
                     isValid = true;
 
-                if (!IsRegex && line.Contains(Pattern))
+                if (!IsRegex && trimmedLine.Contains(Pattern))
                     isValid = true;
 
                 if(isValid)
@@ -33,7 +34,7 @@ namespace MapReduce
                     {
                         using (StreamWriter writer = new StreamWriter(TempFilePath, true))
                         {
-                            writer.WriteLine($"{order} {line}");
+                            writer.WriteLine($"{order} {trimmedLine}");
                         }
                     }
                 }

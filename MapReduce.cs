@@ -24,37 +24,48 @@
 
         public void Run(IEnumerable<string> input)
         {
-            foreach (var item in input)
+            try
             {
-                MapQueue.Enqueue(item);
-            }
+                foreach (var item in input)
+                {
+                    MapQueue.Enqueue(item);
+                }
 
-            var mapTasks = new List<Task>();
-            for (int i = 0; i < NumWorkers; i++)
+                var mapTasks = new List<Task>();
+                for (int i = 0; i < NumWorkers; i++)
+                {
+                    mapTasks.Add(Task.Run(MapWorker));
+                }
+
+                Task.WaitAll(mapTasks.ToArray());
+
+                var tempFileData = File.ReadAllLines(TempFilePath);
+
+                var groupedData = GroupByKey(tempFileData);
+
+                var orderedData = new List<string>[input.Count()];
+
+                foreach (var item in groupedData)
+                {
+                    orderedData[int.Parse(item.Key) - 1] = item.Value;
+                }
+
+                foreach (var item in orderedData)
+                {
+                    if (item != null)
+                        Reduce(item);
+                }
+
+                Console.WriteLine("Finalizou");
+                Console.WriteLine("Resultado em input_data/grep_output.txt");
+            } catch (FileNotFoundException)
             {
-                mapTasks.Add(Task.Run(MapWorker));
-            }
-
-            Task.WaitAll(mapTasks.ToArray());
-
-            var tempFileData = File.ReadAllLines(TempFilePath);
-
-            var groupedData = GroupByKey(tempFileData);
-
-            var orderedData = new List<string>[input.Count()];
-
-            foreach (var item in groupedData)
+                Console.WriteLine("Nada foi encontrado!");
+            } catch (Exception ex)
             {
-                orderedData[int.Parse(item.Key) - 1] = item.Value;
+                Console.WriteLine(ex.Message);
             }
-
-            foreach (var item in orderedData)
-            {
-                if(item != null)
-                    Reduce(item);
-            }
-
-            Console.WriteLine("Finalizou");
+            
         }
 
         protected virtual void Map(string input, int order)

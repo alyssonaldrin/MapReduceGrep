@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrepMapReduce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca45549c44e16ad1da815071b1b18621a84be8d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc393ea0b5e98175ced3f16db81364062a3f28e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrepMapReduce")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrepMapReduce")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,17 +1,16 @@
 ﻿using MapReduce;
 
 int split = 10;
-int linesPerFile = 200;
 int N = 10000;
 char[] alphabet = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
 int minSize = 3;
 int maxSize = 7;
 string outputPath = "input_data";
 
-var fileGenerator = new FileGenerator(split, linesPerFile, N, alphabet, minSize, maxSize);
-fileGenerator.GenerateFile(outputPath);
+var fileGenerator = new FileGenerator(split, N, alphabet, minSize, maxSize);
+//fileGenerator.GenerateFile(outputPath);
 
-Console.WriteLine($"Arquivo gerado em {outputPath}");
+//Console.WriteLine($"Arquivo gerado em {outputPath}");
 
 string command = Console.ReadLine();
 string[] commandStrings = command.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -36,8 +35,6 @@ if (commandStrings[0] == "grep")
 
     var wordCountMapReduce = new GrepMapReduce(pattern, isRegex, numWorkers, "input_data/grep_temp.txt", "input_data/grep_output.txt");
     wordCountMapReduce.Run(inputData);
-
-    Console.WriteLine($"Resultado em input_data/grep_output.txt");
 }
 else
 {

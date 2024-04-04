@@ -3,20 +3,18 @@
     public class FileGenerator
     {
         private readonly int Split;
-        private readonly int LinesPerFile;
         private readonly int N;
         private readonly char[] Alphabet;
         private readonly int MinSize;
         private readonly int MaxSize;
 
-        public FileGenerator(int split, int linesPerFile, int n, char[] alphabet, int minSize, int maxSize)
+        public FileGenerator(int split, int n, char[] alphabet, int minSize, int maxSize)
         {
             Split = split;
             N = n;
             Alphabet = alphabet;
             MinSize = minSize;
             MaxSize = maxSize;
-            LinesPerFile = linesPerFile;
         }
 
         public void GenerateFiles(string outputPath)
@@ -89,27 +87,21 @@
 
         public void SplitFile(string outputPath, string path)
         {
-            string[] words = File.ReadAllText($"{outputPath}/{path}").Split(" ", StringSplitOptions.RemoveEmptyEntries);
-            int wordsPerSplit = (int)Math.Ceiling((double)words.Length / Split);
+            string file = File.ReadAllText($"{outputPath}/{path}");
+            string[] lines = file.Split("\n", StringSplitOptions.RemoveEmptyEntries);
+            int linesPerSplit = (int)Math.Ceiling((double)lines.Length / Split);
 
             for (int i = 0; i < Split; i++)
             {
-                string[] aux = words.Skip(i * wordsPerSplit)
-                                    .Take(wordsPerSplit)
+                string[] aux = lines.Skip(i * linesPerSplit)
+                                    .Take(linesPerSplit)
                                     .ToArray();
-                int wordsPerLine = (int)Math.Ceiling((double)aux.Length / LinesPerFile);
+
                 string filePath = Path.Combine(outputPath, $"file_{i + 1}.txt");
-
-                for (int j = 0; j < LinesPerFile; j++)
+                File.Delete(filePath);
+                using (StreamWriter writer = new StreamWriter(filePath, true))
                 {
-                    string[] aux2 = aux.Skip(j * wordsPerLine)
-                                       .Take(wordsPerLine)
-                                       .ToArray();
-
-                    using (StreamWriter writer = new StreamWriter(filePath, true))
-                    {
-                        writer.WriteLine(string.Join(" ", aux2));
-                    }
+                    writer.WriteLine(string.Join("\n", aux));
                 }
             }
         }
